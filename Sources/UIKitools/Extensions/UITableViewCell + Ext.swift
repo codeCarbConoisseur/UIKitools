@@ -8,10 +8,10 @@
 
 import UIKit
 
-extension UITableViewCell {
-    func addSeparatorLine(leftOffset: CGFloat, rightOffSet: CGFloat) {
+public extension UITableViewCell {
+    func addSeparatorLine(backgroundColor: UIColor, leftOffset: CGFloat, rightOffSet: CGFloat) {
         let separatorView: UIView = UIView(frame: .zero)
-        separatorView.backgroundColor = UIColor(hex: "#E6EFEC", alpha: 1)
+        separatorView.backgroundColor = backgroundColor
         contentView.addSubview(separatorView)
         separatorView.translatesAutoresizingMaskIntoConstraints = false
         let bottomConstraint = separatorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0.5)

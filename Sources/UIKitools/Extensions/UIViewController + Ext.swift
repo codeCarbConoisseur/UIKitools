@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     func add(childViewController: UIViewController) {
         self.addChild(childViewController)
         self.view.addSubview(childViewController.view)
@@ -41,7 +41,7 @@ extension UIViewController {
     
 }
 
-extension UIViewController {
+public extension UIViewController {
     
     private class func instantiateControllerInStoryboard<T: UIViewController>(_ storyboard: UIStoryboard, identifier: String) -> T {
         return storyboard.instantiateViewController(withIdentifier: identifier) as! T
@@ -61,7 +61,7 @@ extension UIViewController {
 }
 
 // MARK: ActivityViewController
-extension UIViewController {
+public extension UIViewController {
     
     func startActivityIndicator(with spinnerController: SpinnerViewController) {
         addChild(spinnerController)
@@ -77,7 +77,7 @@ extension UIViewController {
     }
 }
 
-extension UIViewController {
+public extension UIViewController {
     
     func presentAlert(title: String, message: String, buttonTitle: String, handler: (() -> ()?)?) {
         let alert = UIAlertController(
@@ -96,7 +96,7 @@ extension UIViewController {
 }
 
 // MARK: darkMode:
-extension UIViewController {
+public extension UIViewController {
     func setupAdaptiveNavBar() {
         if #available(iOS 13.0, *) {
             if traitCollection.userInterfaceStyle == .dark {

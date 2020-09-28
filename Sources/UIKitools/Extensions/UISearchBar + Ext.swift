@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UISearchBar {
+public extension UISearchBar {
 
     func getTextField() -> UITextField? { return value(forKey: "searchField") as? UITextField }
     func set(textColor: UIColor) { if let textField = getTextField() { textField.textColor = textColor } }

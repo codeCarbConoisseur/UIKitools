@@ -7,13 +7,13 @@
 
 import UIKit
 
-class SpinnerViewController: UIViewController {
-    var spinner: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
-    var alpha: Double
-    var style: UIActivityIndicatorView.Style
-    var color: UIColor
+public final class SpinnerViewController: UIViewController {
+    fileprivate var spinner: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
+    fileprivate var alpha: Double
+    fileprivate var style: UIActivityIndicatorView.Style
+    fileprivate var color: UIColor
     
-    init(alpha: Double, style: UIActivityIndicatorView.Style, color: UIColor) {
+    public init(alpha: Double, style: UIActivityIndicatorView.Style, color: UIColor) {
         self.alpha = alpha
         self.style = style
         self.color = color
@@ -24,7 +24,7 @@ class SpinnerViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
+    public override func loadView() {
         if #available(iOS 13.0, *) {
             spinner.style = .large
         } else {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     public func shake(duration: CFTimeInterval = 0.5) {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
@@ -18,7 +18,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     func setLinearGradient(startColor: UIColor, endColor: UIColor) -> CALayer {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
@@ -31,7 +31,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     func activityStartAnimating(activityColor: UIColor, backgroundColor: UIColor) {
         if let _ = viewWithTag(475647){
            return
@@ -74,7 +74,7 @@ extension UIView {
 //}
 
 // MARK: Gradient:
-extension UIView {
+public extension UIView {
     // For insert layer in Foreground
     func addGradientLayerInForeground(frame: CGRect, colors:[UIColor]){
         let gradient = CAGradientLayer()
@@ -92,7 +92,7 @@ extension UIView {
 }
 
 
-extension UIView {
+public extension UIView {
     func fillSuperview() {
         translatesAutoresizingMaskIntoConstraints = false
         if let superview = superview {

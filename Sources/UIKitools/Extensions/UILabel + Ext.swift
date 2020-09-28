@@ -8,18 +8,18 @@
 
 import UIKit
 
-extension UILabel {
-        convenience public init(text: String? = nil, font: UIFont? = UIFont.systemFont(ofSize: 14), textColor: UIColor = .black, textAlignment: NSTextAlignment = .left, numberOfLines: Int = 1) {
-            self.init()
-            self.text = text
-            self.font = font
-            self.textColor = textColor
-            self.textAlignment = textAlignment
-            self.numberOfLines = numberOfLines
-        }
+public extension UILabel {
+    convenience init(text: String? = nil, font: UIFont? = UIFont.systemFont(ofSize: 14), textColor: UIColor = .black, textAlignment: NSTextAlignment = .left, numberOfLines: Int = 1) {
+        self.init()
+        self.text = text
+        self.font = font
+        self.textColor = textColor
+        self.textAlignment = textAlignment
+        self.numberOfLines = numberOfLines
+    }
 }
 
-@IBDesignable extension UILabel {
+@IBDesignable public extension UILabel {
     func setCharacterSpacing(_ characterSpacing: CGFloat = 0.0) {
         guard let labelText = text else { return }
         
@@ -55,7 +55,7 @@ extension UILabel {
         attributedText = attributedString
     }
     
-    @IBInspectable public var kern_: CGFloat {
+    @IBInspectable var kern_: CGFloat {
         set {
             self.setCharacterSpacing(newValue)
         }

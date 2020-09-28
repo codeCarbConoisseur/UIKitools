@@ -7,18 +7,18 @@
 
 import UIKit
 
-func measureClosure(title: String, operation:()->()) {
+public func measureClosure(title: String, operation:()->()) {
     let startTime = CFAbsoluteTimeGetCurrent()
     operation()
     let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
     print("Time elapsed for \(title): \(timeElapsed) s")
 }
 
-func randomRange(lower: UInt32 , upper: UInt32) -> UInt32 {
+public func randomRange(lower: UInt32 , upper: UInt32) -> UInt32 {
     return lower + arc4random_uniform(upper - lower + 1)
 }
 
-func randomString(_ length: Int) -> String {
+public func randomString(_ length: Int) -> String {
     
     let letters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     let len = UInt32(letters.length)
@@ -34,7 +34,7 @@ func randomString(_ length: Int) -> String {
     return randomString
 }
 
-func printAllAvailableFonts() {
+public func printAllAvailableFonts() {
     let fontFamilyNames = UIFont.familyNames
     
     for familyName in fontFamilyNames {

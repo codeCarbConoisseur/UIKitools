@@ -9,7 +9,7 @@
 import UIKit.UIImage
 
 // MARK: Resize:
-extension UIImage {
+public extension UIImage {
     var squared: UIImage? {
         let originalWidth  = size.width
         let originalHeight = size.height
