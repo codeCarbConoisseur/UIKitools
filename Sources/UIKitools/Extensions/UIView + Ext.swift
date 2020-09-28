@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIView {
-    public func shake(duration: CFTimeInterval = 0.5) {
+    func shake(duration: CFTimeInterval = 0.5) {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         animation.values = [ -10, 10, -5 ]

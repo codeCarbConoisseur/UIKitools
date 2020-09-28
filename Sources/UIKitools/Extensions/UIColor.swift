@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIColor {
-    convenience init(hex: String, alpha: Double) {
+    convenience init(hex: String, alpha: CGFloat = 1) {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
@@ -17,7 +17,7 @@ public extension UIColor {
         }
         
         if ((cString.count) != 6) {
-            self.init(red: 50, green: 50, blue: 50, alpha: CGFloat(alpha))
+            self.init(red: 50, green: 50, blue: 50, alpha: alpha)
             return
         }
         
