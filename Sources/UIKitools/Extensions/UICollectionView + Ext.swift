@@ -56,11 +56,11 @@ public extension UICollectionView {
   }
   
   func registerSectionHeader<T: UICollectionReusableView>(_ header: T.Type) {
-    register(header, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: cell.autoReuseIdentifier)
+    register(header, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: header.autoReuseIdentifier)
   }
   
   func registerSectionFooter<T: UICollectionReusableView>(_ footer: T.Type) {
-    register(footer, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: cell.autoReuseIdentifier)
+    register(footer, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footer.autoReuseIdentifier)
   }
   
   // Private
