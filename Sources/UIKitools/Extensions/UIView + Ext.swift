@@ -62,8 +62,8 @@ public extension UIView {
   }
   func activityStopAnimating(withDelay: Double = 0) {
     if withDelay > 0 {
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-        removeActivityIndicator()
+      DispatchQueue.main.asyncAfter(deadline: .now() + withDelay) {
+        self.removeActivityIndicator()
       }
     }
     removeActivityIndicator()
