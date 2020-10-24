@@ -11,8 +11,8 @@ import AudioToolbox
 
 // MARK: Vibrate
 public extension UIDevice {
-    static func vibrate() {
-        AudioServicesPlaySystemSound(1519)
-    }
+  static func vibrate() {
+    AudioServicesPlaySystemSound(1519)
+  }
 }
 
