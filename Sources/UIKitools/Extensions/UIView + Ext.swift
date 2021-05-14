@@ -52,7 +52,7 @@ public extension UIView {
     } else {
       activityIndicator.style = .gray
     }
-    activityIndicator.color = .white
+    activityIndicator.color = activityColor
     activityIndicator.startAnimating()
     self.isUserInteractionEnabled = false
     
